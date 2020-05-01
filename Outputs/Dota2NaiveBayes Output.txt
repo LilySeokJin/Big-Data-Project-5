@@ -1,0 +1,129 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     match
+Instances:    50000
+Attributes:   13
+              match_id
+              start_time
+              duration
+              tower_status_radiant
+              tower_status_dire
+              barracks_status_dire
+              barracks_status_radiant
+              first_blood_time
+              game_mode
+              negative_votes
+              positive_votes
+              cluster
+              radiant_win
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                    Class
+Attribute                            TRUE           FALSE
+                                   (0.52)          (0.48)
+==========================================================
+match_id
+  mean                          25048.8667      24946.2631
+  std. dev.                     14478.3017      14385.3751
+  weight sum                         25943           24057
+  precision                              1               1
+
+start_time
+  mean                     1447573613.9266 1447572580.7017
+  std. dev.                    149065.8104     147938.9421
+  weight sum                         25943           24057
+  precision                        23.0405         23.0405
+
+duration
+  mean                           2428.1534       2528.5287
+  std. dev.                       639.0505        625.6716
+  weight sum                         25943           24057
+  precision                         4.4731          4.4731
+
+tower_status_radiant
+  mean                           1887.4453         45.3426
+  std. dev.                         289.72        153.1273
+  weight sum                         25943           24057
+  precision                         16.246          16.246
+
+tower_status_dire
+  mean                             63.5306       1872.0779
+  std. dev.                       172.6858        310.1306
+  weight sum                         25943           24057
+  precision                        16.1181         16.1181
+
+barracks_status_dire
+  mean                             10.9391         59.9252
+  std. dev.                        19.7779         10.5833
+  weight sum                         25943           24057
+  precision                         1.3404          1.3404
+
+barracks_status_radiant
+  mean                             59.7607          7.6931
+  std. dev.                        11.4229         17.1206
+  weight sum                         25943           24057
+  precision                           1.26            1.26
+
+first_blood_time
+  mean                             94.2898         93.3536
+  std. dev.                        92.5564         92.7078
+  weight sum                         25943           24057
+  precision                         1.5137          1.5137
+
+game_mode
+  mean                             19.4789         19.4563
+  std. dev.                         3.3333          3.3333
+  weight sum                         25943           24057
+  precision                             20              20
+
+negative_votes
+  mean                              0.0097          0.0123
+  std. dev.                         0.4123          0.4224
+  weight sum                         25943           24057
+  precision                         2.4737          2.4737
+
+positive_votes
+  mean                              0.0304          0.0291
+  std. dev.                         0.9539          0.7736
+  weight sum                         25943           24057
+  precision                         2.5806          2.5806
+
+cluster
+  mean                            142.0513        141.8242
+  std. dev.                        24.8459         24.8307
+  weight sum                         25943           24057
+  precision                         4.2258          4.2258
+
+
+
+Time taken to build model: 0.23 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       49406               98.812  %
+Incorrectly Classified Instances       594                1.188  %
+Kappa statistic                          0.9762
+Mean absolute error                      0.012 
+Root mean squared error                  0.1055
+Relative absolute error                  2.408  %
+Root relative squared error             21.1236 %
+Total Number of Instances            50000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.987    0.011    0.990      0.987    0.989      0.976    1.000     1.000     TRUE
+                 0.989    0.013    0.987      0.989    0.988      0.976    1.000     1.000     FALSE
+Weighted Avg.    0.988    0.012    0.988      0.988    0.988      0.976    1.000     1.000     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 25618   325 |     a = TRUE
+   269 23788 |     b = FALSE
