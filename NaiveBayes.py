@@ -64,12 +64,11 @@ def cross_validation_split(dataset, numGroups):
 
 def load_dataset(filename):
 	dataset = list()
-	with open(filename, 'r') as file:
-		csv_reader = reader(file)
-		for row in csv_reader:
-			if not row:
-				continue
-			dataset.append(row)
+	csv_reader = reader(open(filename, 'r'))
+	for row in csv_reader:
+		if not row:
+			continue
+		dataset.append(row)
 	return dataset
 
 def separate_by_class(dataset):
@@ -147,7 +146,7 @@ def predict(summaries, row):
 
 #Main Function
 seed(1)
-filename = 'match2.csv'
+filename = 'KaggleV2-May-2016.csv'
 dataset = load_dataset(filename)
 for i in range(len(dataset[0])-1):
 	str_column_to_float(dataset, i)
